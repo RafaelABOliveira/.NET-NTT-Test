@@ -12,6 +12,6 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct
         public required string Description { get; set; }
         public required string Category { get; set; }
         public required string Image { get; set; }
-        public required RatingRequest Rating { get; set; } = new RatingRequest { Rate = 0, Count = 0 };
+        public required RatingRequest Rating { get; set; } = new RatingRequest { Rate = 0 };
     }
 }

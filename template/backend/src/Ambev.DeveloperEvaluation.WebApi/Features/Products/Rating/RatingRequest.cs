@@ -6,6 +6,5 @@
     public class RatingRequest
     {
         public required decimal Rate { get; set; }
-        public required int Count { get; set; }
     }
 }
