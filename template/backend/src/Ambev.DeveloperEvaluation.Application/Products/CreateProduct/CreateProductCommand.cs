@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Ambev.DeveloperEvaluation.Common.Validation;
+using Ambev.DeveloperEvaluation.Domain.Entities;
 
 namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 
@@ -47,7 +48,7 @@ public class CreateProductCommand : IRequest<CreateProductResult>
     /// <summary>
     /// Gets or sets the rating of the product.
     /// </summary>
-    public ProductRating Rating { get; set; } = new ProductRating();
+    public RatingClass Rating { get; set; } = new RatingClass();
 
     /// <summary>
     /// Validates the product creation command.
@@ -63,20 +64,4 @@ public class CreateProductCommand : IRequest<CreateProductResult>
             Errors = result.Errors.Select(o => (ValidationErrorDetail)o)
         };
     }
-}
-
-/// <summary>
-/// Represents the rating details of a product.
-/// </summary>
-public class ProductRating
-{
-    /// <summary>
-    /// Gets or sets the average rating.
-    /// </summary>
-    public decimal Rate { get; set; }
-
-    /// <summary>
-    /// Gets or sets the count of ratings.
-    /// </summary>
-    public int Count { get; set; }
 }

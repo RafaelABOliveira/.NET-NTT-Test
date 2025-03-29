@@ -18,6 +18,6 @@
         /// <summary>
         /// Navigation property for the associated product.
         /// </summary>
-        public Product Product { get; set; } = new Product();
+        public Product? Product { get; set; }
     }
 }

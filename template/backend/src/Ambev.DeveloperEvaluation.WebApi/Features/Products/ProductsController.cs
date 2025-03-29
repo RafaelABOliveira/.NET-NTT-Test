@@ -34,7 +34,7 @@ public class ProductsController : BaseController
     /// <param name="request">The product creation request</param>
     /// <param name="cancellationToken">Cancellation token</param>
     /// <returns>The created product details</returns>
-    [HttpPost]
+    [HttpPost("CreateProduct")]
     [ProducesResponseType(typeof(ApiResponseWithData<CreateProductResponse>), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request, CancellationToken cancellationToken)

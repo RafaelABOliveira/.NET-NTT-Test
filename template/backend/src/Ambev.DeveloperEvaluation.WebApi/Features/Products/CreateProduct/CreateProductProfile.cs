@@ -13,13 +13,18 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct
         public CreateProductProfile()
         {
             CreateMap<CreateProductRequest, CreateProductCommand>();
+            CreateMap<CreateProductCommand, CreateProductRequest>();
             CreateMap<CreateProductResult, CreateProductResponse>();
-            CreateMap<RatingRequest, ProductRating>();
+            CreateMap<RatingRequest, RatingClass>();
 
-            CreateMap<CreateProductCommand, Product>();
+            CreateMap<CreateProductCommand, Product>()
+                .ForMember(dest => dest.Rating, opt => opt.MapFrom(src => new RatingClass
+                {
+                    Rate = src.Rating.Rate,
+                    ProductId = Guid.NewGuid() 
+                }));
 
-            CreateMap<ProductRating, RatingClass>()
-                .ForMember(dest => dest.Rate, opt => opt.MapFrom(src => src.Rate));
+            CreateMap<Product, CreateProductResult>();
         }
     }
 }

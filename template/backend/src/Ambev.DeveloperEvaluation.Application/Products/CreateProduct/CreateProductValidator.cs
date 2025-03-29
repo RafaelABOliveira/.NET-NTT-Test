@@ -26,6 +26,5 @@ public class CreateProductValidator : AbstractValidator<CreateProductCommand>
         RuleFor(product => product.Description).NotEmpty().Length(10, 500);
         RuleFor(product => product.Category).NotEmpty();
         RuleFor(product => product.Rating.Rate).InclusiveBetween(0, 5);
-        RuleFor(product => product.Rating.Count).GreaterThanOrEqualTo(0);
     }
 }
