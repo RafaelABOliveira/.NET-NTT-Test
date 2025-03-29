@@ -1,14 +1,16 @@
-﻿namespace Ambev.DeveloperEvaluation.Domain.Entities
+﻿using Ambev.DeveloperEvaluation.Domain.Common;
+
+namespace Ambev.DeveloperEvaluation.Domain.Entities
 {
     /// <summary>
     /// Represents an individual item within a sale, including quantity, pricing, and discounts.
     /// </summary>
-    public class SaleItem
+    public class SaleItem : BaseEntity
     {
         /// <summary>
         /// Gets the product Id.
         /// </summary>
-        public int ProductId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Gets the product obj.

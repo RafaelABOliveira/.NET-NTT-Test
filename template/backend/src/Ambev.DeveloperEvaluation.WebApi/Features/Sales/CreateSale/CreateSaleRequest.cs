@@ -1,11 +1,11 @@
 ﻿using Ambev.DeveloperEvaluation.Domain.Entities;
 
-namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
+namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales.CreateSale
 {
     /// <summary>
-    /// Represents the response after creating a sale.
+    /// Represents the request to create a sale.
     /// </summary>
-    public class CreateSaleResponse
+    public class CreateSaleRequest
     {
         public required string SaleNumber { get; set; }
         public required DateTime SaleDate { get; set; }
@@ -15,4 +15,6 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
         public required List<SaleItem> Items { get; set; } = new();
         public bool IsCancelled { get; set; } = false;
     }
+
+
 }

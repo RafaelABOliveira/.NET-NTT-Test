@@ -1,10 +1,10 @@
 ﻿using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.Domain.Repositories;
+using Ambev.DeveloperEvaluation.Domain.Interfaces.Repositories;
 
 namespace Ambev.DeveloperEvaluation.ORM.Repositories
 {
     /// <summary>
-    /// Implementation of IProductRepository using Entity Framework Core
+    /// Implementation of IProductRepository
     /// </summary>
     public class ProductRepository : IProductRepository
     {

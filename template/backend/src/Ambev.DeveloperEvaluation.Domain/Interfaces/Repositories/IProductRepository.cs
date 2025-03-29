@@ -1,6 +1,6 @@
 ﻿using Ambev.DeveloperEvaluation.Domain.Entities;
 
-namespace Ambev.DeveloperEvaluation.Domain.Repositories
+namespace Ambev.DeveloperEvaluation.Domain.Interfaces.Repositories
 {
     /// <summary>
     /// Repository interface for Product entity operations (just creation)
